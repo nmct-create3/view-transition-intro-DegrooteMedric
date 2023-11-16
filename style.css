@@ -9,10 +9,7 @@
 /* reset */
 
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
-    font-size: 1rem;
 }
 
 /* global page styles */
@@ -24,18 +21,25 @@ html {
     -moz-osx-font-smoothing: grayscale;
 }
 
-body {}
+body {
+    margin: 0;
+}
+
+/* objects */
 
 .list-reset {
     list-style: none;
     padding: 0;
 }
 
+/* components */
+
 .nav__list {}
 
 .nav__item {}
 
 .nav__link {
+    /* give the links a different background color */
 
     .nav__item--one & {}
 
@@ -47,6 +51,8 @@ body {}
 }
 
 .page {}
+
+/* give the pages a different background color */
 
 .page--one {}
 
