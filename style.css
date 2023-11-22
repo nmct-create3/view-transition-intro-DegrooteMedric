@@ -1,9 +1,8 @@
 :root {
-    /* windows logo colors */
-    --windows-blue: #0078D7;
-    --windows-green: #00BC0C;
-    --windows-yellow: #FFB900;
-    --windows-red: #FF0000;
+    --color-purple: oklch(0.44 0.23 311.11);
+    --color-pink: oklch(0.66 0.26 16.42);
+    --color-yellow: oklch(0.84 0.2 86.18);
+    --color-ocean: oklch(0.7 0.25 151.84);
 }
 
 /* reset */
@@ -15,13 +14,26 @@
 /* global page styles */
 
 html {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 125%;
+    font-family: "Nunito", sans-serif;
     /* smooth font rendering */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
 body {
+    margin: 0;
+}
+
+svg,
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-size: 6rem;
     margin: 0;
 }
 
@@ -38,17 +50,9 @@ body {
 
 .nav__item {}
 
-.nav__link {
-    /* give the links a different background color */
+.nav__link {}
 
-    .nav__item--one & {}
-
-    .nav__item--two & {}
-
-    .nav__item--three & {}
-
-    .nav__item--four & {}
-}
+/* give the links a different background color */
 
 .page {}
 
