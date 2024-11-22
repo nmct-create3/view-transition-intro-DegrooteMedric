@@ -6,67 +6,82 @@
 }
 
 /* reset */
-
 * {
     box-sizing: border-box;
 }
 
 /* global page styles */
-
 html {
-    font-size: 125%;
+    font-size: 100%;
     font-family: "Nunito", sans-serif;
-    /* smooth font rendering */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
 body {
     margin: 0;
+    display: grid;
+    place-items: center; /* Center everything inside body */
+    height: 100vh;
 }
 
-svg,
-img {
+.nav__list {
+    display: grid;
+    grid-template-columns: repeat(2, 20vw); /* 2 columns with 20vw width */
+    grid-template-rows: repeat(2, 20vh); /* 2 rows with 20vh height */
+    gap: 10px; /* Space between items */
+}
+
+.nav__item {
+    width: 100%;
+    height: 100%;
+}
+
+.nav__link {
+    display: grid;
+    place-items: center; /* Center the text */
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav__link--one { background-color: var(--color-purple); }
+.nav__link--two { background-color: var(--color-pink); }
+.nav__link--three { background-color: var(--color-yellow); }
+.nav__link--four { background-color: var(--color-ocean); }
+
+label {
+    font-weight: bold;
     display: block;
-    max-width: 100%;
-    height: auto;
+    text-align: center;
+    line-height: 1;
 }
 
-h1 {
-    font-size: 6rem;
-    margin: 0;
+
+.page{
+    height: 100%;
+    width: 100%;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    place-items: center;
+    background-color: gray;
 }
 
-/* objects */
-
-.list-reset {
-    list-style: none;
-    padding: 0;
+.page__body{
+    grid-column: 2;
+    grid-row: 2;
 }
 
-/* components */
-
-.nav__list {}
-
-.nav__item {}
-
-.nav__link {}
-
-/* give the links a different background color */
-
-.page {}
-
-/* give the pages a different background color */
-
-.page--one {}
-
-.page--two {}
-
-.page--three {}
-
-.page--four {}
-
-.page__back {}
-
-.page__body,
-.page__back {}
+.page__back{
+    grid-column: 3;
+    grid-row: 1;
+}
